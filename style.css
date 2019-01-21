@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css?family=Sarabun:300,400,500,600,700,800');
+
+*{
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-width: 1000px;
+    min-height: 600px;
+    width: 100%;
+    height: 100vh;
+    background: url('images/wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body{
+    width: 100%;
+    margin: auto;
+
+}
+
+
+
+
+
+#container{
+    height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#musicToggle{
+    position: absolute;
+    margin: 48px 0px;
+    bottom: -17px;
+    right: -62px;
+    padding: 15px 15px 15px 11px;
+    border-radius: 0 4px 4px 0;
+    background-color : rgba(15, 15, 15, 0.7); 
+    box-shadow: 10px 0px 40px 1px rgba(255, 255, 255, 0.3);
+    transition: .25s;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 3;
+}
+
+#musicToggle:hover{
+    right: -72px;
+    padding: 15px 15px 15px 21px;
+    background-color : rgba(15, 15, 15, 0.8); 
+
+}
+
+#title1{
+    margin-top: 10px;
+}
+
+#title2{
+    position: absolute;
+    top: 210px;
+    margin: -30px 0 90px 0;
+}
+
+#subContainer{
+    position: absolute;
+    top: 290px;
+}
+
+#textBox {
+    text-align: center;
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 126px;
+    max-height: 126px;
+    border: 0px;
+    padding:5px;
+    background-color : rgba(255, 255, 255, 0.7); 
+    font-size: 23px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 40px -5px black;
+    transition: box-shadow .3s;
+    margin-bottom: 20px;  
+}
+
+#textBox:hover{
+    outline: none;
+    box-shadow: 2px -2px 40px -1px rgb(0, 0, 0);
+}
+
+#textBox:focus{
+    outline: none;
+    box-shadow: 2px -2px 40px 4px rgb(0, 0, 0);
+    
+}
+
+#outputContainer{
+    position: absolute;    
+    max-width: 90%;
+
+    top: 462px;
+    margin-bottom: 20px;
+}
+
+#outputContainer > #output{    
+    margin: auto;
+    min-width: 869px;
+    text-align: center;
+    box-shadow: 2px -2px 40px 4px rgb(0, 0, 0);
+    border-radius: 5px;
+    padding:5px;    
+    transition: opacity .4s, visibility .4s, background-color .2s, border-radius .2s;
+    visibility: visible;
+    opacity: 1;
+    z-index: 2;
+    background-color : white;
+
+}
+
+#outputContainer > #output:empty{
+    min-height: 53px;
+    visibility: hidden;
+    opacity: 0;    
+}
+
+
+#alignment{ 
+    position: absolute;
+    right: 0px;
+    top: -38px;
+    cursor: pointer;  
+    border-radius: 5px;
+    padding: 5px;   
+    z-index: 5;  
+}
+
+
+#alignment:hover ~ #alignmentSettingDiv{ 
+    border-radius: 5px;
+    padding: 5px;    
+    top: -70px;
+    right: 8px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+#alignmentSettingDiv{
+    border-radius: 5px;
+    padding: 5px;  
+    z-index: -1;
+    visibility: hidden;  
+    transition: .3s;    
+    top: -70px;
+    right: 8px;
+    opacity: 0;
+    position: absolute;
+    width:174px;
+    height: 32px;
+}
+
+#alignmentSettingDiv:hover {
+    z-index: 1;
+    top: -70px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#alignmentSettingDiv:hover .alignmentSettings{
+    visibility: visible;
+    z-index: 1;
+    transition: top .25s;
+}
+
+#left{
+    position: absolute;
+    right: 104px;
+    top: -2px;
+    padding: 10px 14px 10px 11px;
+    cursor: pointer;
+    transition: .25s; 
+    filter: hue-rotate(0deg) brightness(110%);
+}
+
+#left:hover{    
+    top: -6px;
+}
+
+#center{ 
+    position: absolute;
+    right: -7px;    
+    top: -2px;
+    padding: 10px 10px 10px 14px;  
+    cursor: pointer;
+    transition: .25s;
+    filter: hue-rotate(170deg) brightness(140%);   
+}
+
+#center:hover{    
+    top: -6px;
+}
+
+
+
+#text{ 
+    position: absolute;
+    left: 0px;
+    top: -38px;
+    cursor: pointer;  
+    border-radius: 5px;
+    padding: 5px;   
+    z-index: 5;  
+}
+
+#text:hover ~ #colorSettingDiv{ 
+    border-radius: 5px;
+    padding: 5px;    
+    top: -90px;
+    left: -80px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+#colorSettingDiv{
+    border-radius: 5px;
+    padding: 5px;  
+    z-index: -1;
+    visibility: hidden;  
+    transition: .3s;    
+    top: -90px;
+    left: -80px;
+    opacity: 0;
+    position: absolute;
+    width:250px;
+    height: 90px;
+}
+
+#colorSettingDiv:hover {
+    z-index: 1;
+    left: -80px;
+    top: -90px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#colorSettingDiv:hover .colorSettings{
+    visibility: visible;
+    z-index: 1;
+    transition: .25s;
+}
+
+#pink{
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    cursor: pointer;
+    transition: .25s; 
+    padding: 10px 5px;
+    filter: brightness(1.2);
+}
+
+#pink:hover{    
+    top: -2px;
+}
+
+#red{ 
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 46px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s;
+    padding: 10px 5px;
+    filter: hue-rotate(60deg) brightness(1.1);
+}
+
+#red:hover{    
+    top: -2px;
+}
+
+#orange{ 
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 86px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s;
+    padding: 10px 5px;
+    filter: hue-rotate(85deg) brightness(3);
+}
+
+#orange:hover{    
+    top: -2px;
+}
+
+#yellow{ 
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 126px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s;
+    padding: 10px 5px;
+    filter: hue-rotate(85deg) brightness(5);
+}
+
+#yellow:hover{    
+    top: -2px;
+}
+
+#green{ 
+    min-width: 33px;
+    min-height: 33px; 
+    position: absolute;
+    left: 166px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s; 
+    padding: 10px 5px;
+    filter: hue-rotate(170deg) brightness(1.8);
+}
+
+#green:hover{    
+    top: -2px;
+}
+
+#blue{ 
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 206px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s; 
+    padding: 10px 5px;
+    filter: hue-rotate(270deg) brightness(2);
+}
+
+#blue:hover{    
+    top: -2px;
+}
+
+img{
+    image-rendering: pixelated;
+}
+
+#background{ 
+    position: relative;
+    bottom: -3px;
+    cursor: pointer;  
+    padding: 5px;   
+    z-index: 5;  
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+
+
+
+
+#background:hover ~ #backgroundSettingDiv{ 
+    border-radius: 5px;
+    padding: 5px;    
+    top: -48px;
+    left: -15px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+#backgroundSettingDiv{
+    border-radius: 5px;
+    padding: 5px;  
+    z-index: -1;
+    visibility: hidden;  
+    transition: .3s;    
+    top: -48px;
+    left: -15px;
+    opacity: 0;
+    position: absolute;
+    width:250px;
+    height: 90px;
+}
+
+#backgroundSettingDiv:hover {
+    z-index: 1;
+    left: -15px;
+    top: -48px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#backgroundSettingDiv:hover .backgroundSettings{
+    visibility: visible;
+    z-index: 1;
+    transition: .25s;
+}
+
+#white{
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 80px;
+    top: 7px;
+    cursor: pointer;
+    transition: .25s; 
+    padding: 10px 5px;
+    filter: hue-rotate(300deg) brightness(100);
+}
+
+#white:hover{    
+    top: -2px;
+}
+
+#black{ 
+    min-width: 33px;
+    min-height: 33px;
+    position: absolute;
+    left: 120px;    
+    top: 7px;
+    cursor: pointer;
+    transition: .25s;
+    padding: 10px 5px;
+    filter: brightness(0);
+}
+
+#black:hover{    
+    top: -2px;
+}
+
+
+
+
+
+
+
+
+#infoContainer{
+    z-index: 5;
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .2s;
+    opacity: 0;
+}
+
+#infoToggle{
+    min-width: 1000px;   
+    min-height: 100vh;
+    width: 100%; 
+    background-color : rgba(0, 0, 0, 0.8);
+}
+
+#info{
+    position: absolute;
+    padding: 0px 20px 5px 20px;
+    font-weight: 700;
+    min-width: 900px;
+    max-width: 900px;
+    text-align: center;
+    line-height: 25px;
+    background-color : rgba(255, 255, 255, .875); 
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 40px -5px black;
+}
+
+#infoText{
+    margin-top: 0px;
+}
+
+.infoPic1{
+    margin-top: 10px;
+}
+
+.infoPic{
+    margin-top: 25px;
+}
+
+#credits{
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+a{
+    color: rgba(255, 0, 0, .95);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+#FAQ{
+    position: absolute;
+    top: 8px;
+    padding: 10px;
+    right: 10px;
+    cursor: pointer;
+    
+}
+
+#FAQ:hover{
+    animation: shake 1.5s;
+    animation-iteration-count: infinite; 
+}
+
+
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-20deg); }
+    20% { transform: rotate(20deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform:rotate(0deg); }
+}
+
+
+body::after {
+    position:absolute; 
+    width:0; 
+    height:0; 
+    overflow:hidden; 
+    z-index:-2;
+    content:url(images/Bad_Note.png) url(images/A.png) url(images/B.png) url(images/C.png) url(images/D.png)  url(images/E.png) url(images/F.png)  url(images/G.png)  url(images/H.png)  url(images/I.png)  url(images/J.png)  url(images/K.png)  url(images/L.png)  url(images/M.png)  url(images/N.png)  url(images/A.png)  url(images/O.png)  url(images/P.png)  url(images/Q.png)  url(images/R.png)  url(images/S.png)  url(images/T.png)  url(images/U.png)  url(images/V.png)  url(images/W.png)  url(images/X.png)  url(images/Y.png) url(images/Z.png) url(images/Space.png) url(images/Apostrophe.png) url(images/Quote.png) url(images/Exclamation_Mark.png) url(images/Question_Mark.png) url(images/1.png) url(images/2.png) url(images/3.png) url(images/4.png) url(images/5.png) url(images/6.png) url(images/7.png) url(images/8.png) url(images/9.png) url(images/0.png) url(images/Period.png) url(mages/Semicolon.png) url(images/Colon.png) url(images/Not_Available.png);
+}

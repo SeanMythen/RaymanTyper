@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- RaymanTyper has only been tested in Chrome and Firefox!! -->
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rayman Typer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+
+        <meta name="Description" contents="Create text using the original Rayman font!" />
+
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="Author" content="Seán Mythen" />
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        
+           
+        <div id='container'>
+                <img id="FAQ" src="images/Question_Mark.png">
+            <img id="title1" src="images/rayman_name.png">
+            <img id="title2" src="images/typer.png">
+            <div id="subContainer">
+                <textarea rows="4" cols="70" id="textBox" placeholder="Type something here!" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete=off></textarea>
+
+                <img id="text" src="images/text.png">
+                <div id='colorSettingDiv'>
+                    <img class='colorSettings' id="pink" src="images/pink.png">
+                    <img class='colorSettings' id="red" src="images/pink.png">
+                    <img class='colorSettings' id="orange" src="images/pink.png">
+                    <img class='colorSettings' id="yellow" src="images/pink.png">
+                    <img class='colorSettings' id="green" src="images/pink.png">
+                    <img class='colorSettings' id="blue" src="images/pink.png">
+                </div>                
+
+                <img id="alignment" src="images/alignment.png">
+                <div id='alignmentSettingDiv'>
+                    <img class='alignmentSettings' id="left" src="images/left.png">
+                    <img class='alignmentSettings' id="center" src="images/center.png">
+                </div>
+
+                <img id='musicToggle' id="left" src="images/Bad_Note_Purple.png">
+            </div>
+
+            <div id='outputContainer'>
+                <img id="background" src="images/background.png">
+                <div id='backgroundSettingDiv'>
+                    <img class='backgroundSettings' id="white" src="images/white.png">
+                    <img class='backgroundSettings' id="black" src="images/black.png">
+                </div>   
+                <div id='output'></div>
+            </div>
+                                    
+            <div id="store"></div>              
+
+        </div>
+
+        
+            <div id =infoContainer>
+                    <div id ='infoToggle'></div>
+                <div id ='info'>
+            <img id='whatIsRaymanTyper' class="infoPic1" src="images/whatIsRaymanTyper.png">
+            <div id="infoText">Rayman Typer allows anyone to create bodies of text in the style found in the original Rayman game!<br></div>
+
+            <img id='howDoIUseRaymanTyper' class="infoPic" src="images/howDoIUseRaymanTyper.png">
+            <div id="infoText">Simply type something into the input box!
+                    Once you've input some text you can change the text color, alignment, 
+                    and background color by hovering over their respective buttons.<br>
+                    When you're happy with how everything looks, simply take a screenshot using
+                    your keyboard's <br>"print screen" key on your keyboard.                
+            </div>
+
+            <img id='someCharactersAreNotWorking' class="infoPic" src="images/someCharactersAreNotWorking.png">
+            <div id="infoText">That's ok! There are a few characters that never appeared in-game so they were never created by Rayman's developers!
+                I gave my best attempt at creating a few of the missing characters.  For the ones I wasn't able to create, you will see a warnign sign in its place. </div>
+
+                <div id="credits">Created by <a href="https://seanmythen.net">Seán Mythen</a></div>
+            </div>
+
+        
+        </div>
+
+        <div id="music">
+            <audio id="mainSong" loop>
+                <source src="audio/song.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+            <script src="main.js"></script>
+
+            <script>
+                
+            </script>
+
+
+        </body>
+    </html>
