@@ -567,7 +567,7 @@ body::after {
 
 #mobileMessageWarning{
     width: 90vw;
-    background-color : rgba(255, 255, 255, .6); 
+    background-color : rgba(255, 255, 255, .8); 
     border-radius: 5px;
     box-shadow: -2px -2px 40px -5px black;
     padding: 10px;
@@ -579,11 +579,15 @@ body::after {
 
 #mobileMessageText{
     width: 90vw;
-    background-color : rgba(255, 255, 255, .6); 
+    background-color : rgba(255, 255, 255, .8); 
     border-radius: 5px;
     box-shadow: -2px -2px 40px -5px black;
-    padding: 20px;
+    padding: 15px;
     font-size: 1.4em;
     text-align: center;
     
+}
+
+#typerText{
+    white-space:nowrap;
 }
