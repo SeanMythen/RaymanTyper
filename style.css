@@ -456,7 +456,7 @@ img{
 
 #infoContainer{
     z-index: 5;
-    width: 100%;
+    min-width: 100%;
     visibility: hidden;
     position: absolute;
     top:0;
