@@ -552,3 +552,38 @@ body::after {
     z-index:-2;
     content:url(images/Bad_Note.png) url(images/A.png) url(images/B.png) url(images/C.png) url(images/D.png)  url(images/E.png) url(images/F.png)  url(images/G.png)  url(images/H.png)  url(images/I.png)  url(images/J.png)  url(images/K.png)  url(images/L.png)  url(images/M.png)  url(images/N.png)  url(images/A.png)  url(images/O.png)  url(images/P.png)  url(images/Q.png)  url(images/R.png)  url(images/S.png)  url(images/T.png)  url(images/U.png)  url(images/V.png)  url(images/W.png)  url(images/X.png)  url(images/Y.png) url(images/Z.png) url(images/Space.png) url(images/Apostrophe.png) url(images/Quote.png) url(images/Exclamation_Mark.png) url(images/Question_Mark.png) url(images/1.png) url(images/2.png) url(images/3.png) url(images/4.png) url(images/5.png) url(images/6.png) url(images/7.png) url(images/8.png) url(images/9.png) url(images/0.png) url(images/Period.png) url(images/Semicolon.png) url(images/Colon.png) url(images/Not_Available.png);
 }
+
+
+#mobileMessage{
+    display: none;
+    width: 100%;
+    height: 100vh;  
+    
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+#mobileMessageWarning{
+    width: 90vw;
+    background-color : rgba(255, 255, 255, .6); 
+    border-radius: 5px;
+    box-shadow: -2px -2px 40px -5px black;
+    padding: 10px;
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+#mobileMessageText{
+    width: 90vw;
+    background-color : rgba(255, 255, 255, .6); 
+    border-radius: 5px;
+    box-shadow: -2px -2px 40px -5px black;
+    padding: 20px;
+    font-size: 1.4em;
+    text-align: center;
+    
+}

@@ -781,3 +781,48 @@ function toggleInfo() {
 
 
 }
+
+
+let mobile = document.getElementById('mobileMessage');
+let raymanLogo = document.getElementById('title1');
+let typerLogo = document.getElementById('title2');
+let alignment = document.getElementById('alignment');
+let container = document.getElementById('container');
+
+let html = document.getElementById('html');
+
+
+if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i))
+ {
+
+mobile.style.display = ('flex');
+musicToggle.style.display = ('none');
+faq.style.display = ('none');
+infoContainer.style.display = ('none');
+infoToggle.style.display = ('none');
+raymanLogo.style.display = ('none');
+typerLogo.style.display = ('none');
+textBox.style.display = ('none');
+color.style.display = ('none');
+alignment.style.display = ('none');
+container.style.display = ('none');
+musicToggle.style.display = ('none');
+
+
+html.style.maxWidth = ('100vw');
+html.style.maxHeight = ('100vw');
+html.style.minWidth = ('100vw');
+html.style.minHeight = ('100vh');
+
+
+
+
+
+
+ }
