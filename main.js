@@ -789,6 +789,8 @@ let typerLogo = document.getElementById('title2');
 let alignment = document.getElementById('alignment');
 let container = document.getElementById('container');
 
+let body = document.getElementById('body');
+
 let html = document.getElementById('html');
 
 
@@ -822,7 +824,8 @@ html.style.minHeight = ('100vh');
 
 
 
-
-
-
  }
+
+ window.onload = function(){
+     body.classList.remove('preload')
+ };
